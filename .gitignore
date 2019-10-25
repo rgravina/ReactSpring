@@ -6,6 +6,7 @@ build/
 !**/src/test/**
 .DS_Store
 node_modules
+server/src/main/resources/static/built
 
 ### STS ###
 .apt_generated
