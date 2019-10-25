@@ -1,0 +1,35 @@
+{
+  "name": "reactspring",
+  "version": "1.0.0",
+  "description": "React Spring sample",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgravina/ReactSpring.git"
+  },
+  "author": "Robert Gravina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rgravina/ReactSpring/issues"
+  },
+  "homepage": "https://github.com/rgravina/ReactSpring#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
