@@ -1,13 +1,18 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/js/app.js',
-    devtool: 'sourcemaps',
+    entry: "./src/js/index.js",
     cache: true,
     mode: 'development',
     output: {
-        path: __dirname,
-        filename: '../server/src/main/resources/static/built/bundle.js'
+        path: __dirname + '/../server/src/main/resources/static/built',
+        filename: 'bundle.js'
+    },
+    devServer: {
+        port: 3000,
+        proxy: {
+            '/api': 'http://localhost:8080'
+        }
     },
     module: {
         rules: [
@@ -20,6 +25,14 @@ module.exports = {
                         presets: ["@babel/preset-env", "@babel/preset-react"]
                     }
                 }]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
             }
         ]
     }

@@ -1,0 +1,10 @@
+---
+applications:
+  - name: reactspring
+    instances: 1
+    memory: 768M
+    path: server/build/libs/reactspring-0.0.1-SNAPSHOT.jar
+    buildpacks:
+      - java_buildpack
+    routes:
+      - route: reactspring.cfapps.io

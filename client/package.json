@@ -7,8 +7,10 @@
     "lib": "lib"
   },
   "scripts": {
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --require @babel/register",
+    "e2e": "./node_modules/.bin/testcafe chrome test/e2e"
   },
   "repository": {
     "type": "git",
@@ -24,11 +26,23 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "@babel/register": "^7.7.0",
     "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "mocha": "^6.2.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "testcafe": "^1.6.1",
+    "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   }
